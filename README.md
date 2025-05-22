@@ -1,28 +1,28 @@
 # Carbon Emission Calculator
 
-An intelligent carbon emission calculator for flights that uses machine learning to provide accurate carbon footprint estimates and recommendations.
+An intelligent carbon emission calculator for flights that uses machine learning to provide accurate carbon footprint estimates and recommendations. This course was started in May 2024, where I developed the backend of the project, parsing over 700,000 lines of json data to calculate carbon emissions from one airport to another. Now, a year later I am trying to integrate ML into the project and develope a better front end interface for the project as a hobby to better my ML and front-end skills. I have listed key criteria and visions of the projects I have below. This is still a work in progress so expect a lot of changes to occur on the daily
 
 ## Features
 
-- Flight carbon emission calculation
-- Machine learning-based emission predictions
-- Interactive route visualization
-- Carbon offset recommendations
-- User-friendly interface
+- Flight carbon emission calculation - DONE
+- Machine learning-based emission predictions - In progress
+- Interactive route visualization - In progress
+- Carbon offset recommendations - In progress
+- User-friendly interface - Currently a local server that can be run using Dash - but in progress of turning this into a website
 
 ## Project Structure
 
 ```
 carbon-emission-calculator/
-├── src/
-│   ├── models/         # ML models and training code
-│   ├── data/          # Data processing and storage
-│   ├── utils/         # Utility functions
-│   ├── api/           # API endpoints
-├── tests/             # Unit and integration tests
-├── docs/              # Documentation
-├── requirements.txt   # Project dependencies
-└── README.md         # Project documentation
+src/
+    models/          # ML models and training code
+    data/            # Data processing and storage
+    utils/           # Utility functions
+    api/             # API endpoints
+tests/               # Unit and integration tests
+docs/                # Documentation
+requirements.txt     # Project dependencies
+README.md            # Project documentation
 ```
 
 ## Setup
@@ -49,7 +49,7 @@ pip install -r requirements.txt
 python src/main.py
 ```
 
-## AI/ML Features
+## AI/ML Features - Working on these new features in the summer of 2025
 
 - Carbon emission prediction using historical flight data
 - Route optimization for minimal carbon impact
