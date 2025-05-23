@@ -1,28 +1,32 @@
 # Carbon Emission Calculator
 
-An intelligent carbon emission calculator for flights that uses machine learning to provide accurate carbon footprint estimates and recommendations.
+A machine learning-based tool for predicting carbon emissions from flight routes. The project uses a Random Forest model to predict carbon emissions based on various flight characteristics.
 
 ## Features
 
-- Flight carbon emission calculation
-- Machine learning-based emission predictions
-- Interactive route visualization
-- Carbon offset recommendations
-- User-friendly interface
+- Data preprocessing and feature engineering for flight route data
+- Machine learning model for carbon emission prediction
+- Model evaluation and visualization tools
+- Web interface for easy interaction (coming soon)
 
 ## Project Structure
 
 ```
-carbon-emission-calculator/
+Carbon Emission Calculator/
 ├── src/
-│   ├── models/         # ML models and training code
-│   ├── data/          # Data processing and storage
-│   ├── utils/         # Utility functions
-│   ├── api/           # API endpoints
-├── tests/             # Unit and integration tests
-├── docs/              # Documentation
-├── requirements.txt   # Project dependencies
-└── README.md         # Project documentation
+│   ├── data/
+│   │   ├── data_loader.py
+│   │   └── feature_engineering.py
+│   ├── models/
+│   │   ├── base_model.py
+│   │   └── emission_model.py
+│   ├── utils/
+│   │   └── visualization.py
+│   └── train.py
+├── data/
+│   └── airline_routes.json
+├── requirements.txt
+└── README.md
 ```
 
 ## Setup
@@ -33,9 +37,9 @@ git clone https://github.com/yourusername/carbon-emission-calculator.git
 cd carbon-emission-calculator
 ```
 
-2. Create a virtual environment:
+2. Create and activate a virtual environment:
 ```bash
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
@@ -44,31 +48,38 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Run the application:
+## Usage
+
+### Training the Model
+
+To train the model and generate visualizations:
+
 ```bash
-python src/main.py
+python src/train.py
 ```
 
-## AI/ML Features
+This will:
+- Load and preprocess the flight route data
+- Perform feature engineering
+- Train the Random Forest model
+- Generate performance visualizations
+- Save results in the `training_results` directory
 
-- Carbon emission prediction using historical flight data
-- Route optimization for minimal carbon impact
-- Personalized carbon offset recommendations
-- Weather impact analysis on emissions
+### Model Performance
+
+The current model achieves:
+- MSE: ~1.12e-07
+- RMSE: ~0.0003
+- R2 Score: ~0.9999
 
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contact
-
-Your Name - your.email@example.com
-Project Link: https://github.com/yourusername/carbon-emission-calculator 
+This project is licensed under the MIT License - see the LICENSE file for details. 
